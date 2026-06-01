@@ -392,6 +392,70 @@ h3 {
   color: rgba(255, 250, 242, 0.78);
 }
 
+.stretching-tab {
+  gap: 22px;
+  cursor: pointer;
+}
+
+.stretching-tab summary {
+  display: flex;
+  min-height: 0;
+  flex-direction: column;
+  justify-content: flex-end;
+  cursor: pointer;
+  list-style: none;
+}
+
+.stretching-tab summary::-webkit-details-marker {
+  display: none;
+}
+
+.stretching-tab summary::after {
+  content: "+";
+  align-self: flex-start;
+  width: 34px;
+  height: 34px;
+  margin-top: 18px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255, 250, 242, 0.28);
+  border-radius: 50%;
+  color: var(--cream);
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.stretching-tab[open] summary::after {
+  content: "-";
+}
+
+.stretching-programs {
+  display: grid;
+  gap: 10px;
+}
+
+.stretching-programs article {
+  padding: 14px;
+  border: 1px solid rgba(255, 250, 242, 0.2);
+  border-radius: 8px;
+  background: rgba(255, 250, 242, 0.08);
+}
+
+.stretching-programs strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--cream);
+  font-size: 0.96rem;
+  line-height: 1.2;
+}
+
+.stretching-programs p {
+  margin: 0;
+  color: rgba(255, 250, 242, 0.72);
+  font-size: 0.88rem;
+  line-height: 1.42;
+}
+
 .aroma {
   background: #e9dbc8;
 }
