@@ -395,6 +395,14 @@ h3 {
 .stretching-tab {
   gap: 22px;
   cursor: pointer;
+  background-color: var(--terracotta);
+  background-image:
+    linear-gradient(90deg, rgba(150, 61, 49, 0.95) 0%, rgba(150, 61, 49, 0.72) 52%, rgba(21, 20, 18, 0.28) 100%),
+    linear-gradient(0deg, rgba(21, 20, 18, 0.26), rgba(21, 20, 18, 0.02)),
+    url("assets/movement.JPG");
+  background-position: center, center, 64% 44%;
+  background-repeat: no-repeat;
+  background-size: cover, cover, cover;
 }
 
 .stretching-tab summary {
