@@ -442,11 +442,20 @@ h3 {
   gap: 10px;
 }
 
-.stretching-programs article {
+.stretching-programs article,
+.stretching-programs .program-link {
+  display: block;
   padding: 14px;
   border: 1px solid rgba(255, 250, 242, 0.2);
   border-radius: 8px;
   background: rgba(255, 250, 242, 0.08);
+  transition: border-color 180ms ease, background 180ms ease, transform 180ms ease;
+}
+
+.stretching-programs .program-link:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 250, 242, 0.52);
+  background: rgba(255, 250, 242, 0.14);
 }
 
 .stretching-programs strong {
@@ -700,6 +709,357 @@ h3 {
   color: var(--cream);
 }
 
+.sale-page {
+  background: var(--warm);
+}
+
+.sale-header {
+  position: fixed;
+  z-index: 20;
+  top: 18px;
+  left: 50%;
+  width: min(1120px, calc(100% - 32px));
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 12px 14px;
+  color: var(--cream);
+  background: rgba(21, 20, 18, 0.42);
+  border: 1px solid rgba(255, 250, 242, 0.2);
+  border-radius: 999px;
+  backdrop-filter: blur(18px);
+}
+
+.sale-nav {
+  display: flex;
+  gap: 8px;
+}
+
+.sale-nav a {
+  padding: 9px 12px;
+  border-radius: 999px;
+  color: rgba(255, 250, 242, 0.84);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.cell-hero {
+  min-height: 100svh;
+  display: grid;
+  grid-template-columns: minmax(320px, 0.94fr) minmax(320px, 0.86fr);
+  gap: 44px;
+  align-items: center;
+  padding: 130px max(24px, calc((100vw - 1120px) / 2)) 84px;
+  color: var(--cream);
+  background:
+    radial-gradient(circle at 16% 14%, rgba(215, 193, 166, 0.2), transparent 34%),
+    linear-gradient(135deg, #7f2f27 0%, #963d31 48%, #211411 100%);
+}
+
+.cell-hero h1 {
+  max-width: 760px;
+  margin-bottom: 24px;
+  font-size: clamp(3.2rem, 7vw, 6.7rem);
+}
+
+.cell-hero-copy > p:not(.sale-pill) {
+  max-width: 650px;
+  color: rgba(255, 250, 242, 0.82);
+  font-size: clamp(1.1rem, 2vw, 1.38rem);
+}
+
+.sale-pill {
+  width: fit-content;
+  margin: 0 0 18px;
+  padding: 10px 15px;
+  border-radius: 999px;
+  color: var(--terracotta);
+  background: rgba(255, 250, 242, 0.82);
+  font-size: 0.78rem;
+  font-weight: 850;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.sale-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.sale-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 32px;
+}
+
+.sale-meta span {
+  padding: 8px 11px;
+  border: 1px solid rgba(255, 250, 242, 0.28);
+  border-radius: 999px;
+  color: rgba(255, 250, 242, 0.76);
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.cell-hero-image {
+  position: relative;
+  min-height: 620px;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(255, 250, 242, 0.22);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.cell-hero-image::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background: linear-gradient(0deg, rgba(21, 20, 18, 0.42), transparent 42%);
+}
+
+.cell-hero-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 620px;
+  object-fit: cover;
+  object-position: 48% center;
+}
+
+.sale-strip {
+  display: flex;
+  overflow: hidden;
+  gap: 10px;
+  padding: 18px max(24px, calc((100vw - 1120px) / 2));
+  color: var(--cream);
+  background: var(--ink);
+}
+
+.sale-strip span {
+  flex: 0 0 auto;
+  padding: 9px 14px;
+  border: 1px solid rgba(255, 250, 242, 0.2);
+  border-radius: 999px;
+  color: rgba(255, 250, 242, 0.78);
+  font-size: 0.78rem;
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
+.cell-problem,
+.inside-section,
+.program-section,
+.coach-section,
+.tariff-section {
+  padding: 108px max(24px, calc((100vw - 1120px) / 2));
+}
+
+.cell-problem {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.9fr) minmax(300px, 0.8fr);
+  gap: 52px;
+  align-items: start;
+  background: var(--ivory);
+}
+
+.cell-problem h2,
+.program-intro h2,
+.tariff-copy h2,
+.coach-section h2 {
+  margin-bottom: 0;
+}
+
+.problem-copy {
+  color: var(--muted);
+  font-size: 1.12rem;
+}
+
+.pain-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  padding: 0 max(24px, calc((100vw - 1120px) / 2)) 108px;
+  background: var(--ivory);
+}
+
+.pain-grid article,
+.inside-grid article,
+.week-grid article,
+.tariff-card {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.pain-grid article {
+  min-height: 250px;
+  padding: 22px;
+  background: var(--cream);
+}
+
+.pain-grid span,
+.week-grid span,
+.tariff-card > span {
+  display: inline-block;
+  margin-bottom: 44px;
+  color: var(--sage);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2.2rem;
+}
+
+.pain-grid p,
+.inside-grid p,
+.week-grid li,
+.tariff-card li,
+.tariff-copy p,
+.coach-section p {
+  color: var(--muted);
+}
+
+.inside-section {
+  background: var(--warm);
+}
+
+.inside-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.inside-grid article {
+  min-height: 220px;
+  padding: 24px;
+  background: rgba(255, 250, 242, 0.64);
+}
+
+.program-section {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.7fr) minmax(360px, 1.05fr);
+  gap: 54px;
+  color: var(--cream);
+  background:
+    linear-gradient(90deg, rgba(150, 61, 49, 0.96), rgba(150, 61, 49, 0.72)),
+    url("assets/mobile-hero.JPG");
+  background-position: center;
+  background-size: cover;
+}
+
+.program-intro p:not(.sale-pill) {
+  color: rgba(255, 250, 242, 0.78);
+  font-size: 1.08rem;
+}
+
+.program-section .sale-pill {
+  color: var(--cream);
+  background: rgba(255, 250, 242, 0.16);
+}
+
+.week-grid {
+  display: grid;
+  gap: 14px;
+}
+
+.week-grid article {
+  padding: 24px;
+  background: rgba(255, 250, 242, 0.1);
+  border-color: rgba(255, 250, 242, 0.2);
+}
+
+.week-grid span {
+  margin-bottom: 18px;
+  color: var(--sand);
+  font-size: 0.78rem;
+  font-family: inherit;
+  font-weight: 850;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.week-grid ul,
+.tariff-card ul {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding-left: 19px;
+}
+
+.week-grid li {
+  color: rgba(255, 250, 242, 0.76);
+}
+
+.coach-section {
+  display: grid;
+  grid-template-columns: minmax(300px, 0.76fr) minmax(320px, 0.88fr);
+  gap: 54px;
+  align-items: center;
+  background: var(--ivory);
+}
+
+.coach-section figure {
+  margin: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.coach-section img {
+  width: 100%;
+  height: 580px;
+  object-fit: cover;
+  object-position: 50% 24%;
+}
+
+.tariff-section {
+  display: grid;
+  grid-template-columns: minmax(300px, 0.8fr) minmax(320px, 0.7fr);
+  gap: 54px;
+  align-items: center;
+  color: var(--cream);
+  background: var(--terracotta);
+}
+
+.tariff-section .sale-pill {
+  color: var(--cream);
+  background: rgba(255, 250, 242, 0.14);
+}
+
+.tariff-copy p {
+  max-width: 620px;
+  color: rgba(255, 250, 242, 0.78);
+  font-size: 1.08rem;
+}
+
+.tariff-card {
+  padding: 28px;
+  background: rgba(21, 20, 18, 0.16);
+  border-color: rgba(255, 250, 242, 0.22);
+}
+
+.tariff-card > span {
+  margin-bottom: 28px;
+  color: var(--sand);
+  font-size: 2.6rem;
+}
+
+.tariff-card li {
+  color: rgba(255, 250, 242, 0.76);
+}
+
+.tariff-actions {
+  display: grid;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.sale-footer {
+  border-top: 1px solid rgba(255, 250, 242, 0.12);
+}
+
 @media (max-width: 920px) {
   .site-header {
     align-items: flex-start;
@@ -753,6 +1113,19 @@ h3 {
   .contact-actions {
     justify-content: flex-start;
   }
+
+  .cell-hero,
+  .cell-problem,
+  .program-section,
+  .coach-section,
+  .tariff-section {
+    grid-template-columns: 1fr;
+  }
+
+  .pain-grid,
+  .inside-grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media (max-width: 680px) {
@@ -768,6 +1141,18 @@ h3 {
   }
 
   .nav-links {
+    display: none;
+  }
+
+  .sale-header {
+    position: absolute;
+    top: 12px;
+    width: calc(100% - 24px);
+    padding: 10px;
+    border-radius: 24px;
+  }
+
+  .sale-nav {
     display: none;
   }
 
@@ -863,5 +1248,53 @@ h3 {
     align-items: flex-start;
     padding-left: 18px;
     padding-right: 18px;
+  }
+
+  .cell-hero {
+    min-height: auto;
+    padding: 116px 18px 72px;
+  }
+
+  .cell-hero h1 {
+    font-size: clamp(2.72rem, 13vw, 4.1rem);
+  }
+
+  .cell-hero-image {
+    min-height: 460px;
+  }
+
+  .cell-hero-image img {
+    min-height: 460px;
+  }
+
+  .sale-actions .button,
+  .tariff-actions .button {
+    width: 100%;
+  }
+
+  .sale-strip {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .cell-problem,
+  .inside-section,
+  .program-section,
+  .coach-section,
+  .tariff-section {
+    padding: 76px 18px;
+  }
+
+  .pain-grid {
+    grid-template-columns: 1fr;
+    padding: 0 18px 76px;
+  }
+
+  .inside-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .coach-section img {
+    height: 500px;
   }
 }
