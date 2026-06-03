@@ -745,6 +745,18 @@ h3 {
   font-weight: 700;
 }
 
+.section-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.section-cta.light-cta .button.secondary {
+  border-color: rgba(21, 20, 18, 0.2);
+  color: var(--ink);
+}
+
 .cell-hero {
   min-height: 100svh;
   display: grid;
@@ -928,7 +940,7 @@ h3 {
 
 .pain-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 14px;
   padding: 0 max(24px, calc((100vw - 1120px) / 2)) 108px;
   background: var(--ivory);
@@ -946,6 +958,28 @@ h3 {
   min-height: 250px;
   padding: 22px;
   background: var(--cream);
+}
+
+.pain-cta-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--cream);
+  background: var(--terracotta) !important;
+}
+
+.pain-cta-card span,
+.pain-cta-card p {
+  color: rgba(255, 250, 242, 0.76);
+}
+
+.pain-cta-card h3 {
+  color: var(--cream);
+}
+
+.pain-cta-card .button {
+  width: 100%;
+  margin-top: 18px;
 }
 
 .pain-grid span,
@@ -1315,7 +1349,8 @@ h3 {
   }
 
   .sale-actions .button,
-  .tariff-actions .button {
+  .tariff-actions .button,
+  .section-cta .button {
     width: 100%;
   }
 
