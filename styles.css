@@ -1179,6 +1179,60 @@ h3 {
   border-top: 1px solid rgba(255, 250, 242, 0.12);
 }
 
+.splits-page {
+  background: var(--ivory);
+}
+
+.splits-hero {
+  background:
+    linear-gradient(90deg, rgba(93, 41, 35, 0.96) 0%, rgba(150, 61, 49, 0.78) 52%, rgba(21, 20, 18, 0.46) 100%),
+    url("assets/gallery-03.JPG");
+  background-position: center;
+  background-size: cover;
+}
+
+.splits-hero h1 {
+  max-width: 680px;
+  font-size: clamp(2.95rem, 5.4vw, 5.45rem);
+}
+
+.splits-hero .cell-hero-copy > p:not(.sale-pill) {
+  max-width: 610px;
+}
+
+.splits-hero .cell-hero-image img {
+  object-position: 56% 42%;
+}
+
+.splits-intro {
+  background: var(--ivory);
+}
+
+.splits-result {
+  background:
+    linear-gradient(90deg, rgba(21, 20, 18, 0.9), rgba(93, 41, 35, 0.72)),
+    url("assets/gallery-02.JPG");
+  background-position: center;
+  background-size: cover;
+}
+
+.splits-benefits {
+  background: var(--ivory);
+}
+
+.splits-program {
+  background:
+    linear-gradient(90deg, rgba(150, 61, 49, 0.96), rgba(105, 119, 102, 0.7)),
+    url("assets/mobile-hero.JPG");
+  background-position: center;
+  background-size: cover;
+}
+
+.splits-tariff {
+  background:
+    linear-gradient(135deg, #963d31 0%, #6b5147 58%, #151412 100%);
+}
+
 @media (max-width: 920px) {
   .site-header {
     align-items: flex-start;
@@ -1382,6 +1436,10 @@ h3 {
 
   .cell-hero h1 {
     font-size: clamp(2.72rem, 13vw, 4.1rem);
+  }
+
+  .splits-hero h1 {
+    font-size: clamp(2.42rem, 11vw, 3.48rem);
   }
 
   .cell-hero-image {
