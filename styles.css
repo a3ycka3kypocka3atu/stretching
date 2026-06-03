@@ -737,6 +737,21 @@ h3 {
   gap: 8px;
 }
 
+.page-badge {
+  flex: 0 1 auto;
+  margin-left: auto;
+  padding: 9px 14px;
+  border: 1px solid rgba(255, 250, 242, 0.18);
+  border-radius: 999px;
+  color: var(--sand);
+  background: rgba(255, 250, 242, 0.08);
+  font-size: 0.74rem;
+  font-weight: 850;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
 .sale-nav a {
   padding: 9px 12px;
   border-radius: 999px;
@@ -1231,6 +1246,11 @@ h3 {
     width: calc(100% - 24px);
     padding: 10px;
     border-radius: 24px;
+  }
+
+  .page-badge {
+    margin-left: 0;
+    font-size: 0.68rem;
   }
 
   .sale-nav {
